@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Pragadeeswaran H | CSE & IoT Engineer</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&family=Fira+Code:wght@300;400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- CANVAS BG -->
+  <canvas id="bgCanvas"></canvas>
+
+  <!-- FLOATING SYMBOLS -->
+  <div class="sym-layer" id="symLayer"></div>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo">&lt;PH /&gt;</div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#contact" class="hire-btn">Hire Me ✦</a>
+    <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about" onclick="closeMenu()">About</a>
+    <a href="#skills" onclick="closeMenu()">Skills</a>
+    <a href="#projects" onclick="closeMenu()">Projects</a>
+    <a href="#education" onclick="closeMenu()">Education</a>
+    <a href="#experience" onclick="closeMenu()">Experience</a>
+    <a href="#contact" onclick="closeMenu()">Contact</a>
+  </div>
+
+  <!-- RESUME OVERLAY -->
+  <div id="resumeOverlay">
+    <div class="resume-card">
+      <div class="resume-card-header">
+        <button class="resume-back" onclick="closeResume()">&#8592;</button>
+      </div>
+      <div class="resume-card-body">
+        <div class="fake-resume" id="resumeContent">
+          <div class="fr-name">PRAGADEESWARAN H</div>
+          <div class="fr-links">
+            <span>haripragadees17@gmail.com</span>
+            <span>+91 8870832870</span>
+            <span>linkedin.com/in/pragadeeswaranh</span>
+            <span>github.com/pragadeeswaranh</span>
+          </div>
+          <div class="fr-sec">Summary</div>
+          <div class="fr-item">
+            <div class="fr-item-desc">Computer Science and Engineering (IoT) student, IoT enthusiast and embedded
+              systems engineer with a desire for continuous learning and improvement. Experienced in building embedded
+              projects with hands-on experience in Arduino, ESP32, and Drone technology. Developed over 4+ software and
+              embedded projects in environmental monitoring and women's safety systems. Demonstrated leadership and
+              teamwork by organizing and coordinating an online workshop event for over 100+ attendees along with the
+              IEEE student branch. Dedicated to delivering impactful solutions and aspiring to grow as a software
+              developer, IoT engineer.</div>
+          </div>
+
+          <div class="fr-sec">Skills and Interest</div>
+          <div class="fr-item">
+            <div class="fr-item-title">Programming Languages</div>
+            <div class="fr-skills-row"><span class="fr-skill">C (Basic)</span><span class="fr-skill">Python
+                (Basic)</span><span class="fr-skill">Java (Basic)</span></div>
+          </div>
+          <div class="fr-item">
+            <div class="fr-item-title">AI & Automation Tools</div>
+            <div class="fr-skills-row"><span class="fr-skill">Canva</span><span class="fr-skill">ChatGPT</span><span
+                class="fr-skill">GitHub Copilot</span><span class="fr-skill">Poster design</span><span
+                class="fr-skill">Claude AI</span><span class="fr-skill">Machine Planner</span></div>
+          </div>
+          <div class="fr-item">
+            <div class="fr-item-title">IoT and Embedded Systems</div>
+            <div class="fr-skills-row"><span class="fr-skill">Arduino</span><span class="fr-skill">ESP32</span><span
+                class="fr-skill">Raspberry Pi</span></div>
+          </div>
+          <div class="fr-item">
+            <div class="fr-item-title">Version Control System</div>
+            <div class="fr-skills-row"><span class="fr-skill">Git</span><span class="fr-skill">GitHub</span></div>
+          </div>
+          <div class="fr-item">
+            <div class="fr-item-title">Soft Skills</div>
+            <div class="fr-skills-row"><span class="fr-skill">Leadership</span><span
+                class="fr-skill">Communication</span><span class="fr-skill">Decision making</span></div>
+          </div>
+
+          <div class="fr-sec">Education</div>
+          <div class="fr-item">
+            <div class="fr-item-title">Sri Sairam Engineering College, Chennai &nbsp;—&nbsp; <span
+                style="font-weight:400;">August 2024 – Present</span></div>
+            <div class="fr-item-sub">B.E in Computer Science and Engineering with IoT &nbsp;|&nbsp; CGPA: 9.06 (current)
+            </div>
+          </div>
+          <div class="fr-item">
+            <div class="fr-item-title">Sri Ramakrishna Matriculation Higher Secondary School</div>
+            <div class="fr-item-sub">HSC (Matriculation Board) – 12th – 89.00% &nbsp;|&nbsp; SSLC (Matriculation Board)
+              – 10th – 95.20%</div>
+          </div>
+
+          <div class="fr-sec">Experience</div>
+          <div class="fr-item">
+            <div class="fr-item-title">Sri Sairam Techno Incubator Foundation, Chennai &nbsp;—&nbsp; <span
+                style="font-weight:400;">02 Jan 2026 – 28 Jan 2026</span></div>
+            <ul class="fr-item-bullets">
+              <li>Obtained practical exposure on embedded system development using ESP32.</li>
+              <li>Observed and understood Arduino programming and virtual circuit design using Tinkercad.</li>
+              <li>Practiced IoT and microcontroller projects using the Wokwi application.</li>
+              <li>Acquired knowledge in basic electronics, circuit connections, and microcontroller interfacing.</li>
+            </ul>
+            <div class="fr-item-sub" style="margin-top:.25rem;"><strong>Skills Acquired:</strong> Arduino, ESP32,
+              Circuit connections, microcontroller interface.</div>
+          </div>
+          <div class="fr-item">
+            <div class="fr-item-title">Freelancer, Chennai &nbsp;—&nbsp; <span style="font-weight:400;">25 Feb 2025 – 11
+                Mar 2026</span></div>
+            <div class="fr-item-desc">Working as a freelance poster designer, web developer and UI/UX designer for the
+              past one year, creating responsive and user-friendly website interfaces.</div>
+          </div>
+          <div class="fr-item">
+            <div class="fr-item-title">Bureau of Indian Standards, Sri Sairam Engineering College, Chennai</div>
+            <ul class="fr-item-bullets">
+              <li>Obtained theoretical and practical exposure to Drone Technology and UAV operations.</li>
+              <li>Performed hands-on work with flight controller, Mission Planner software, and hardware connectivity.
+              </li>
+            </ul>
+            <div class="fr-item-sub" style="margin-top:.25rem;"><strong>Skills Acquired:</strong> hardware connectivity,
+              mission planner, UAV operations.</div>
+          </div>
+
+          <div class="fr-sec">Certifications</div>
+          <ul class="fr-item-bullets" style="margin-left:0;padding-left:1rem;">
+            <li>Introduction to IoT – 75%, Joy of Computing Python – 72% (NPTEL)</li>
+            <li>IIT Bombay, Spoken Tutorial – C, C++, Arduino</li>
+            <li>Build Together – Winner</li>
+          </ul>
+
+          <div class="fr-sec">Projects</div>
+          <div class="fr-item">
+            <div class="fr-item-title">Women's Safety Device (Ongoing – 2 Years)</div>
+            <div class="fr-item-desc">Working for the past two years on a women's safety device integrating alert
+              mechanisms, safety modules, and smart technologies.</div>
+          </div>
+          <div class="fr-item">
+            <div class="fr-item-title">AI-Based Fire Monitoring and Alert System</div>
+            <div class="fr-item-desc">Developing a real time fire detection prototype using computer vision and a
+              YOLO-based deep learning model to identify fire from live camera feeds. The system triggers instant alerts
+              less than 5–10 seconds and monitoring through a web dashboard, enabling faster emergency response and
+              improved safety in high-occupancy buildings.</div>
+          </div>
+          <div class="fr-item">
+            <div class="fr-item-title">TruPeer</div>
+            <div class="fr-item-desc">Built TruPeer, an AI-powered decentralized network for micro-entrepreneurs,
+              improving demand prediction efficiency by 30% and achieving 60% adoption of a community-based credit
+              scoring system.</div>
+          </div>
+        </div>
+      </div>
+      <div class="resume-card-footer">
+        <button class="res-foot-btn res-preview" onclick="previewResume()"><i class="fa-solid fa-eye"></i>
+          Preview</button>
+        <button class="res-foot-btn res-download" onclick="downloadResume()"><i class="fa-solid fa-download"></i>
+          Download</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-inner">
+      <div>
+        <div class="hero-badge">Open to Work — CSE & IoT Roles</div>
+        <h1 class="hero-name">Pragadees<span>waran H</span></h1>
+        <div class="hero-typed"><span id="typed"></span><span class="cursor"></span></div>
+        <p class="hero-desc">Computer Science & IoT student passionate about building embedded systems and smart
+          solutions. Hands-on with Arduino, ESP32, Drone tech, and full-stack development. CGPA 9.06.</p>
+        <div class="hero-btns">
+          <button class="btn-primary" onclick="openResume()"><i class="fa-solid fa-file-lines"
+              style="margin-right:.4rem;"></i>View Resume</button>
+          <a href="#contact" class="btn-outline">Get in Touch</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat">
+            <div class="stat-num">4+</div>
+            <div class="stat-lbl">Projects</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">9.06</div>
+            <div class="stat-lbl">CGPA</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">5+</div>
+            <div class="stat-lbl">Workshop reach</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">6+</div>
+            <div class="stat-lbl">hackathons</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-photo-wrap">
+        <div class="hex-ring"></div>
+        <div class="hero-hex" >P H</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="sec-accent" style="right:-1%;top:50%;transform:translateY(-50%);">&lt;/&gt;</div>
+    <div class="sec-inner fade-in">
+      <div class="sec-tag">Who I am</div>
+      <h2 class="sec-title">About Me</h2>
+      <div class="sec-line"></div>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>I'm a <strong>Computer Science & Engineering (IoT)</strong> student at Sri Sairam Engineering College,
+            Chennai, with a strong CGPA of 9.06. My passion lies at the intersection of hardware and software — building
+            systems that are not just functional, but impactful.</p>
+          <p>With hands-on experience in <strong>Arduino, ESP32, Raspberry Pi, and Drone technology</strong>, I've
+            developed over 4+ software and embedded projects focused on environmental monitoring and women's safety
+            systems.</p>
+          <p>Beyond code, I've demonstrated leadership by <strong>co-organizing an online workshop for 100+
+              attendees</strong> with the IEEE student branch. I also work as a <strong>freelance web developer and
+              UI/UX designer</strong>.</p>
+          <p>I aspire to grow as a <strong>Software Developer and IoT Engineer</strong> — dedicated to delivering
+            solutions that make a real difference.</p>
+        </div>
+        <div>
+          <div class="quick-stats">
+            <div class="qs-title">&lt; Quick Facts /&gt;</div>
+            <div class="qs-row"><span class="qs-key">Degree</span><span class="qs-val">B.E CSE with IoT</span></div>
+            <div class="qs-row"><span class="qs-key">College</span><span class="qs-val">Sri Sairam Engg. College</span>
+            </div>
+            <div class="qs-row"><span class="qs-key">CGPA</span><span class="qs-val">9.06 (current)</span></div>
+            <div class="qs-row"><span class="qs-key">Location</span><span class="qs-val">Chennai, India</span></div>
+            <div class="qs-row"><span class="qs-key">Focus</span><span class="qs-val">IoT · Embedded · Web Dev</span>
+            </div>
+            <div class="qs-row"><span class="qs-key">Email</span><span class="qs-val"
+                style="color:var(--silver);font-size:.90rem;">haripragadees17@gmail.com</span></div>
+            <div class="qs-row"><span class="qs-key">Status</span><span class="qs-val" style="color:#7EC8A0;">✦ Open to
+                Opportunities</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="sec-accent" style="left:-1%;top:30%;">{ }</div>
+    <div class="sec-inner fade-in">
+      <div class="sec-tag">What I know</div>
+      <h2 class="sec-title">Skills</h2>
+      <div class="sec-line"></div>
+      <div class="skills-tabs">
+        <button class="tab-btn active" onclick="switchTab('technical',this)">Technical</button>
+        <button class="tab-btn" onclick="switchTab('iot',this)">IoT & Embedded</button>
+        <button class="tab-btn" onclick="switchTab('languages',this)">Languages</button>
+        <button class="tab-btn" onclick="switchTab('soft',this)">Soft Skills</button>
+      </div>
+      <div class="skill-panel active" id="tab-technical">
+        <div class="skill-grid">
+          <div class="skill-card">
+            <div class="sk-name"><i class="fa-brands fa-python"></i>Python</div>
+            <div class="sk-bar">
+              <div class="sk-fill" data-w="60"></div>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="sk-name"><i class="fa-solid fa-c"></i> Language</div>
+            <div class="sk-bar">
+              <div class="sk-fill" data-w="55"></div>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="sk-name"><i class="fa-brands fa-java"></i>Java</div>
+            <div class="sk-bar">
+              <div class="sk-fill" data-w="50"></div>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="sk-name"><i class="fa-brands fa-git-alt"></i>Git & GitHub</div>
+            <div class="sk-bar">
+              <div class="sk-fill" data-w="75"></div>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="sk-name"><i class="fa-brands fa-html5"></i>HTML / CSS</div>
+            <div class="sk-bar">
+              <div class="sk-fill" data-w="80"></div>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="sk-name"><i class="fa-solid fa-robot"></i>AI & Automation</div>
+            <div class="sk-bar">
+              <div class="sk-fill" data-w="70"></div>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="sk-name"><i class="fa-brands fa-figma"></i>UI/UX Design</div>
+            <div class="sk-bar">
+              <div class="sk-fill" data-w="65"></div>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="sk-name"><i class="fa-solid fa-palette"></i>Canva / Design</div>
+            <div class="sk-bar">
+              <div class="sk-fill" data-w="85"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="skill-panel" id="tab-iot">
+        <div class="skill-grid">
+          <div class="skill-card">
+            <div class="sk-name"><i class="fa-solid fa-microchip"></i>Arduino</div>
+            <div class="sk-bar">
+              <div class="sk-fill" data-w="80"></div>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="sk-name"><i class="fa-solid fa-wifi"></i>ESP32</div>
+            <div class="sk-bar">
+              <div class="sk-fill" data-w="75"></div>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="sk-name"><i class="fa-solid fa-server"></i>Raspberry Pi</div>
+            <div class="sk-bar">
+              <div class="sk-fill" data-w="60"></div>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="sk-name"><i class="fa-solid fa-plug"></i>Circuit Design</div>
+            <div class="sk-bar">
+              <div class="sk-fill" data-w="70"></div>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="sk-name"><i class="fa-solid fa-helicopter"></i>Drone / UAV</div>
+            <div class="sk-bar">
+              <div class="sk-fill" data-w="65"></div>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="sk-name"><i class="fa-solid fa-laptop-code"></i>Tinkercad / Wokwi</div>
+            <div class="sk-bar">
+              <div class="sk-fill" data-w="75"></div>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="sk-name"><i class="fa-solid fa-eye"></i>Computer Vision</div>
+            <div class="sk-bar">
+              <div class="sk-fill" data-w="55"></div>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="sk-name"><i class="fa-solid fa-plane"></i>Mission Planner</div>
+            <div class="sk-bar">
+              <div class="sk-fill" data-w="60"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="skill-panel" id="tab-languages">
+        <div class="lang-grid">
+          <div class="lang-card">
+            <div class="lang-flag">🇮🇳</div>
+            <div class="lang-name">Tamil</div>
+            <div class="lang-level">Native</div>
+          </div>
+          <div class="lang-card">
+            <div class="lang-flag">🇬🇧</div>
+            <div class="lang-name">English</div>
+            <div class="lang-level">Professional</div>
+          </div>
+        </div>
+      </div>
+      <div class="skill-panel" id="tab-soft">
+        <div class="soft-grid">
+          <div class="soft-pill"><i class="fa-solid fa-users"></i>Leadership</div>
+          <div class="soft-pill"><i class="fa-solid fa-comments"></i>Communication</div>
+          <div class="soft-pill"><i class="fa-solid fa-chess"></i>Decision Making</div>
+          <div class="soft-pill"><i class="fa-solid fa-people-group"></i>Teamwork</div>
+          <div class="soft-pill"><i class="fa-solid fa-lightbulb"></i>Problem Solving</div>
+          <div class="soft-pill"><i class="fa-solid fa-calendar-check"></i>Event Coordination</div>
+          <div class="soft-pill"><i class="fa-solid fa-pen-ruler"></i>Creative Design</div>
+          <div class="soft-pill"><i class="fa-solid fa-arrow-up-right-dots"></i>Continuous Learning</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="sec-accent" style="right:-1%;bottom:10%;">&gt;_</div>
+    <div class="sec-inner fade-in">
+      <div class="sec-tag">What I've built</div>
+      <h2 class="sec-title">Projects</h2>
+      <div class="sec-line"></div>
+      <div class="proj-filter">
+        <button class="filter-btn active" onclick="filterProj('all',this)">All</button>
+        <button class="filter-btn" onclick="filterProj('iot',this)">IoT</button>
+        <button class="filter-btn" onclick="filterProj('ai',this)">AI / ML</button>
+        <button class="filter-btn" onclick="filterProj('web',this)">Web</button>
+      </div>
+      <div class="proj-grid" id="projGrid">
+        <div class="proj-card" data-cat="iot">
+          <div class="proj-top">
+            <div class="proj-cat">// IoT · Safety</div>
+            <div class="proj-name">Women's Safety Device <span class="proj-status">Ongoing – 2 yrs</span></div>
+            <div class="proj-desc">Long-term project integrating alert mechanisms, safety modules, and smart IoT
+              technologies to create a comprehensive personal safety solution.</div>
+          </div>
+          <div class="proj-tags"><span class="proj-tag">ESP32</span><span class="proj-tag">Arduino</span><span
+              class="proj-tag">IoT</span><span class="proj-tag">Embedded C</span></div>
+          <div class="proj-links"><a href="https://github.com/pragadeeswaranh" target="_blank" class="proj-link"><i
+                class="fa-brands fa-github"></i> GitHub</a></div>
+        </div>
+        <div class="proj-card" data-cat="ai">
+          <div class="proj-top">
+            <div class="proj-cat">// AI · Computer Vision</div>
+            <div class="proj-name">AI-Based Fire Monitoring & Alert System</div>
+            <div class="proj-desc">Real-time fire detection using YOLO on live camera feeds. Triggers alerts within 5–10
+              seconds via web dashboard for faster emergency response.</div>
+          </div>
+          <div class="proj-tags"><span class="proj-tag">YOLO</span><span class="proj-tag">Python</span><span
+              class="proj-tag">OpenCV</span><span class="proj-tag">Dashboard</span></div>
+          <div class="proj-links"><a href="https://github.com/pragadeeswaranh" target="_blank" class="proj-link"><i
+                class="fa-brands fa-github"></i> GitHub</a></div>
+        </div>
+        <div class="proj-card" data-cat="ai web">
+          <div class="proj-top">
+            <div class="proj-cat">// AI · Web · Fintech</div>
+            <div class="proj-name">TruPeer</div>
+            <div class="proj-desc">AI-powered decentralized network for micro-entrepreneurs. Improved demand prediction
+              by 30% and achieved 60% adoption of a community-based credit scoring system.</div>
+          </div>
+          <div class="proj-tags"><span class="proj-tag">AI</span><span class="proj-tag">Decentralized</span><span
+              class="proj-tag">Web</span><span class="proj-tag">Credit Scoring</span></div>
+          <div class="proj-links"><a href="https://github.com/pragadeeswaranh" target="_blank" class="proj-link"><i
+                class="fa-brands fa-github"></i> GitHub</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education">
+    <div class="sec-accent" style="left:-1%;top:20%;">#</div>
+    <div class="sec-inner fade-in">
+      <div class="sec-tag">My academic journey</div>
+      <h2 class="sec-title">Education & Certifications</h2>
+      <div class="sec-line"></div>
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-date">Aug 2024 – Present</div>
+          <div class="tl-title">B.E — Computer Science & Engineering (IoT)</div>
+          <div class="tl-sub">Sri Sairam Engineering College, Chennai</div>
+          <div class="tl-score">CGPA: 9.06 (current)</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-date">Class XII — HSC</div>
+          <div class="tl-title">Matriculation Board</div>
+          <div class="tl-sub">Sri Ramakrishna Matriculation Higher Secondary School</div>
+          <div class="tl-score">89.00%</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-date">Class X — SSLC</div>
+          <div class="tl-title">Matriculation Board</div>
+          <div class="tl-sub">Sri Ramakrishna Matriculation Higher Secondary School</div>
+          <div class="tl-score">95.20%</div>
+        </div>
+      </div>
+      <div class="cert-grid">
+        <div class="cert-card">
+          <div class="cert-icon"><i class="fa-solid fa-certificate"></i></div>
+          <div class="cert-name">Introduction to IoT</div>
+          <div class="cert-by">NPTEL</div>
+          <div class="cert-badge">75% Score</div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-icon"><i class="fa-solid fa-certificate"></i></div>
+          <div class="cert-name">Joy of Computing with Python</div>
+          <div class="cert-by">NPTEL</div>
+          <div class="cert-badge">72% Score</div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+          <div class="cert-name">C, C++ & Arduino</div>
+          <div class="cert-by">IIT Bombay — Spoken Tutorial</div>
+          <div class="cert-badge">Verified</div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-icon"><i class="fa-solid fa-trophy"></i></div>
+          <div class="cert-name">Build Together</div>
+          <div class="cert-by">Hackathon</div>
+          <div class="cert-badge">Winner 🏆</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="sec-accent" style="right:-1%;top:40%;">( )</div>
+    <div class="sec-inner fade-in">
+      <div class="sec-tag">Where I've worked</div>
+      <h2 class="sec-title">Experience</h2>
+      <div class="sec-line"></div>
+      <div class="exp-card">
+        <div class="exp-header">
+          <div>
+            <div class="exp-title">Embedded Systems Intern</div>
+            <div class="exp-company">Sri Sairam Techno Incubator Foundation, Chennai</div>
+          </div>
+          <div class="exp-date">Jan 2026 – Jan 2026</div>
+        </div>
+        <ul class="exp-bullets">
+          <li>Gained practical exposure in embedded system development using ESP32 microcontrollers.</li>
+          <li>Learned and practiced Arduino programming and virtual circuit design using Tinkercad.</li>
+          <li>Built and tested IoT and microcontroller projects using the Wokwi simulation platform.</li>
+          <li>Developed foundational knowledge in electronics, circuit connections, and MCU interfacing.</li>
+        </ul>
+        <div class="exp-skills"><span class="exp-skill">Arduino</span><span class="exp-skill">ESP32</span><span
+            class="exp-skill">Circuit Design</span><span class="exp-skill">Tinkercad</span><span
+            class="exp-skill">Wokwi</span></div>
+      </div>
+      <div class="exp-card">
+        <div class="exp-header">
+          <div>
+            <div class="exp-title">Freelance Web Developer & UI/UX Designer</div>
+            <div class="exp-company">Self-Employed, Chennai</div>
+          </div>
+          <div class="exp-date">Feb 2025 – Mar 2026</div>
+        </div>
+        <ul class="exp-bullets">
+          <li>Designed and developed responsive, user-friendly websites and UI interfaces for clients over 1+ year.</li>
+          <li>Created professional poster designs and visual branding assets.</li>
+          <li>Delivered end-to-end web solutions from wireframing to deployment.</li>
+        </ul>
+        <div class="exp-skills"><span class="exp-skill">Web Dev</span><span class="exp-skill">UI/UX</span><span
+            class="exp-skill">Canva</span><span class="exp-skill">Poster Design</span></div>
+      </div>
+      <div class="exp-card">
+        <div class="exp-header">
+          <div>
+            <div class="exp-title">Drone Technology Trainee</div>
+            <div class="exp-company">Bureau of Indian Standards, Sri Sairam Engineering College</div>
+          </div>
+          <div class="exp-date">Training Program</div>
+        </div>
+        <ul class="exp-bullets">
+          <li>Obtained theoretical and practical exposure to Drone Technology and UAV operations.</li>
+          <li>Performed hands-on work with flight controllers, Mission Planner software, and hardware connectivity.</li>
+        </ul>
+        <div class="exp-skills"><span class="exp-skill">Drone Tech</span><span class="exp-skill">UAV</span><span
+            class="exp-skill">Mission Planner</span><span class="exp-skill">Hardware</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" style="background:var(--slate);">
+    <div class="sec-accent" style="left:-1%;bottom:10%;">@</div>
+    <div class="sec-inner fade-in">
+      <div class="sec-tag">Let's connect</div>
+      <h2 class="sec-title">Get In Touch</h2>
+      <div class="sec-line"></div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <p>I'm actively looking for opportunities in <strong style="color:var(--silver2);">Software Development, IoT
+              Engineering,</strong> and <strong style="color:var(--silver2);">Embedded Systems.</strong> Whether it's a
+            project, internship, or a full-time role — let's build something great together.</p>
+          <div class="contact-links">
+            <a href="mailto:haripragadees17@gmail.com" class="contact-link"><i
+                class="fa-solid fa-envelope"></i><span>haripragadees17@gmail.com</span></a>
+            <a href="tel:+918870832870" class="contact-link"><i class="fa-solid fa-phone"></i><span>+91 88708
+                32870</span></a>
+            <a href="https://www.linkedin.com/in/pragadeeswaran-h-874899325/" target="_blank" class="contact-link"><i
+                class="fa-brands fa-linkedin"></i><span>Pragadeeswaran-h/linkedin.com</span></a>
+            <a href="https://github.com/Pragadee17" target="_blank" class="contact-link"><i
+                class="fa-brands fa-github"></i><span>github.com/Pragadee17</span></a>
+            <a href="https://wa.me/918870832870" target="_blank" class="contact-link"><i
+                class="fa-brands fa-whatsapp"></i><span>WhatsApp</span></a>
+          </div>
+          <div class="social-row">
+            <a href="https://www.linkedin.com/in/pragadeeswaran-h-874899325/" target="_blank" class="soc-btn"><i
+                class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/Pragadee17" target="_blank" class="soc-btn"><i
+                class="fa-brands fa-github"></i></a>
+            <a href="https://wa.me/918870832870" target="_blank" class="soc-btn"><i
+                class="fa-brands fa-whatsapp"></i></a>
+            <a href="mailto:haripragadees17@gmail.com" class="soc-btn"><i class="fa-solid fa-envelope"></i></a>
+          </div>
+        </div>
+        <div class="contact-form">
+          <div class="form-group"><label for="contactName">Name</label><input id="contactName" name="name" type="text"
+              inputmode="text" pattern="[A-Za-z\s'\.-]+" title="Letters, spaces, apostrophes and hyphens only"
+              placeholder="Your name" /></div>
+          <div class="form-group"><label for="contactEmail">Email</label><input id="contactEmail" name="email"
+              type="email" placeholder="your@email.com" /></div>
+          <div class="form-group"><label for="contactMobile">Mobile No.</label><input id="contactMobile" name="mobile"
+              type="tel" inputmode="numeric" pattern="[0-9]*" maxlength="10" placeholder="Mobile no."
+              title="Numbers only" /></div>
+          <div class="form-group"><label for="contactMessage">Message</label><textarea id="contactMessage"
+              name="message" placeholder="Let's collaborate..."></textarea></div>
+          <button class="form-submit">Send Message →</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-name">&lt; Pragadeeswaran H /&gt;</div>
+    <p>Designed & built with <span>♥</span> · CSE & IoT Engineer · Chennai, India</p>
+    <div class="footer-code">// always_learning = true; while(alive) { code(); create(); improve(); }</div>
+  </footer>
+
+  <button id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="fa-solid fa-chevron-up"></i></button>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
